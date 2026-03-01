@@ -19,6 +19,26 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    message: 'RepoPilot AI Backend is running',
+    endpoints: {
+      analyze: '/api/analyze/:owner/:repo',
+      reviewCode: '/api/review-code'
+    }
+  });
+});
+
+app.get('/api', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    message: 'RepoPilot AI API',
+    version: '1.0.0'
+  });
+});
+
 // ─────────────────────────────────────────────────────────────
 // MAIN ANALYSIS ENDPOINT  GET /api/analyze/:owner/:repo
 // Returns the full maintainer + contributor data package
