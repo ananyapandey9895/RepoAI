@@ -56,9 +56,9 @@
 
 #### 3. Issue Overload Analyzer
 - **AI Roadmap Generation**: Auto-categorize issues into:
-  - 🔥 Short-Term (Bugs & Hotfixes)
-  - 🚀 Mid-Term (Features & Enhancements)
-  - 🏛️ Long-Term (Architecture & Epics)
+  - Short-Term (Bugs & Hotfixes)
+  - Mid-Term (Features & Enhancements)
+  - Long-Term (Architecture & Epics)
 - **Stale Issue Detection**: Find issues inactive >30 days
 - **Noise Filtering**: Identify high-comment threads needing moderation
 
